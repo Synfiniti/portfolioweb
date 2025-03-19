@@ -1,0 +1,47 @@
+Welcome to my professional web portfolio. A minimalist yet interactive space where I showcase my most notable projects and my journey as a digital developer and creator.
+
+## ✨ Key Features
+- *Clean and responsive design* that adapts to any device
+- *Smooth interactions* with CSS and JavaScript animations
+- *About Me* section featuring my experience and technical skills
+- *Project gallery* with detailed descriptions and screenshots
+- *Direct access* to my professional networks:
+- 💼 LinkedIn
+- 💻 GitHub
+- 🎨 Behance
+
+## 🛠 Technologies Used
+- *HTML5* for semantic structure
+- *CSS3* for styles and animations
+- *Vanilla JavaScript* for dynamic interactions
+- *Icons* by [SVG Repo](https://www.svgrepo.com/)
+- *Custom fonts* by [Google Fonts](https://fonts.google.com/)
+
+## 🎯 How to Navigate
+1. *Main Section*: Initial introduction to my role Main
+2. *About Me*: Professional details and technical skills
+3. *Projects*: Interactive cards with my featured work
+4. *Contact*: Direct links to my networks and an optional form
+
+## 🚀 How to run locally
+bash
+# Clone repository
+git clone https://github.com/[your-github-username]/portfolio.git
+
+# Open in browser
+cd portfolio
+open index.html
+
+## 📬 Contact
+Let's connect! You can find me on:
+- [LinkedIn](https://www.linkedin.com/in/jean-gutierrez-rivas/)
+- [GitHub]([https://github.com/your-username](https://github.com/Synfiniti))
+- [Behance]([https://behance.net/your-portfolio](https://www.behance.net/jeangutierrez1))
+
+## 📄 License
+This project is licensed under the Jean Gutierrez(LICENSE).
+
+---
+
+Made with ❤️ by [Jean Gutiérrez] - Always learning and creating!
+```
