@@ -1,5 +1,9 @@
 Welcome to my professional web portfolio. A minimalist yet interactive space where I showcase my most notable projects and my journey as a digital developer and creator.
 
+## Web Live
+
+https://synfiniti.github.io/portfolioweb/
+
 ## ✨ Key Features
 - *Clean and responsive design* that adapts to any device
 - *Smooth interactions* with CSS and JavaScript animations
@@ -23,20 +27,12 @@ Welcome to my professional web portfolio. A minimalist yet interactive space whe
 3. *Projects*: Interactive cards with my featured work
 4. *Contact*: Direct links to my networks and an optional form
 
-## 🚀 How to run locally
-bash
-# Clone repository
-git clone https://github.com/[your-github-username]/portfolio.git
-
-# Open in browser
-cd portfolio
-open index.html
 
 ## 📬 Contact
 Let's connect! You can find me on:
 - [LinkedIn](https://www.linkedin.com/in/jean-gutierrez-rivas/)
-- [GitHub]([https://github.com/your-username](https://github.com/Synfiniti))
-- [Behance]([https://behance.net/your-portfolio](https://www.behance.net/jeangutierrez1))
+- [GitHub](https://github.com/Synfiniti))
+- [Behance](https://www.behance.net/jeangutierrez1))
 
 ## 📄 License
 This project is licensed under the Jean Gutierrez(LICENSE).
