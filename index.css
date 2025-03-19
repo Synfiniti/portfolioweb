@@ -16,19 +16,7 @@
   font-style: normal;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-body {
-  cursor: none;
-  height: 100vh;
-  color: black;
-  background-color: rgb(241, 241, 241);
-  transition: 0.3s;
-}
+/* scroll */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -44,49 +32,104 @@ body {
   background-color: rgb(53, 53, 184);
 }
 
-.cursor {
-  z-index: 1000;
+/* scroll */
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  cursor: pointer;
+  height: 100vh;
+  color: black;
+  background-color: rgb(241, 241, 241);
+  transition: 0.3s;
+}
+
+/* navbar */
+
+.jean-header {
+  background-color: rgb(241, 241, 241);
+  width: 100%;
   position: fixed;
-  /* top: 50%;
-  left: 50%; */
-  pointer-events: none;
-}
-
-.cursor-dot {
-  position: absolute;
-  background: rgb(53, 53, 184);
-  width: 5px;
-  height: 5px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  transition-property: top, left, width, height;
-  transition-duration: 0.03s, 0.03s, 0.3s, 0.3s;
-}
-
-.cursor-circle {
-  position: absolute;
-  border: 2px solid rgb(53, 53, 184);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  opacity: 0.5;
-  transform: translate(-50%, -50%);
-  transition-property: top, left;
-  transition-duration: 0.09s, 0.09s;
-}
-
-.cursor-dot.large {
-  background: rgb(53, 53, 184, 0.25);
-  width: 75px;
-  height: 75px;
-  transition-property: top, left, width, height;
-  transition-duration: 0.03s, 0.03s, 0.3s, 0.3s;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  z-index: 100;
+  transition: 0.3 ease;
 }
 
 .jean-container {
-  max-width: 1770 px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.jean-header .inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jean-logo a span {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  transition: 0.3s;
+}
+
+.header-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#behance svg {
+  padding-top: 0.2rem;
+  width: 25px;
+  height: 25px;
+  fill: rgb(0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+
+#behance:hover svg {
+  transform: scale(1.2);
+  fill: rgb(79, 79, 255);
+}
+
+#github svg {
+  padding-top: 0.2rem;
+  width: 25px;
+  height: 25px;
+  fill: #000000;
+  transition: 0.3s ease-in-out;
+}
+
+#github:hover svg {
+  transform: scale(1.2);
+  fill: rgb(79, 79, 255);
+}
+
+#linkedin svg {
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+  transition: 0.3s ease-in-out;
+}
+
+#linkedin:hover svg {
+  transform: scale(1.2);
+  fill: rgb(79, 79, 255);
+}
+
+.jean-main-btn:hover {
+  color: grey;
+  background-color: rgb(79, 79, 255);
 }
 
 .jean-main-btn {
@@ -97,55 +140,9 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.section-btn-cv {
-  width: fit-content;
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: rgb(79, 79, 255);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.section-btn-cv a {
-  color: white;
-  font-size: 1rem;
-}
-
-.section-btn-cv:hover {
-  background-color: rgb(43, 43, 148);
-}
-
-.title-main-btn {
-  width: fit-content;
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: rgb(79, 79, 255);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.title-main-btn a {
-  color: white;
-  font-size: 1rem;
-}
-
-.title-main-btn:hover {
-  color: white;
-  background-color: rgb(43, 43, 148);
-}
-
-.title-main-btn a:hover {
-  color: white;
-}
-
-.jean-main-btn:hover {
-  color: grey;
-  background-color: rgb(79, 79, 255);
-}
-
 .jean-main-btn a {
   color: black;
-  font-size: 1.07rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -157,278 +154,12 @@ body {
 .border-btn {
   border: 2px solid rgb(79, 79, 255);
 }
+/* navbar */
 
-.jean-header {
-  background-color: rgb(241, 241, 241);
-  width: 100%;
-  position: fixed;
-  padding-top: 3rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  z-index: 100;
-  transition: 0.3 ease;
-}
+/* presentation */
 
-.jean-header .inner {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.jean-logo a {
-  position: relative;
-}
-
-.hover-effect-ux,
-.hover-effect,
-.hover-effect-design,
-.hover-effect-dev,
-.title-project {
-  position: relative;
-}
-
-.title-project svg {
-  width: 16rem;
-  height: 16rem;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.title-project svg path {
-  fill: transparent;
-  stroke-width: 1.2px;
-  stroke: rgb(0, 0, 0);
-}
-
-.title-project svg path {
-  stroke-dasharray: 1000.709716796875;
-  stroke-dashoffset: -1000.709716796875;
-  transition: stroke-dashoffset 0.8s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.title-project:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.hover-effect-ux svg {
-  width: 15rem;
-  height: 15rem;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.hover-effect-ux svg path {
-  fill: transparent;
-  stroke-width: 2px;
-  stroke: rgb(255, 5, 5);
-}
-
-.hover-effect-ux svg path {
-  stroke-dasharray: 1000.709716796875;
-  stroke-dashoffset: -1000.709716796875;
-  transition: stroke-dashoffset 0.8s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.hover-effect-ux:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.hover-effect-design svg {
-  width: 20rem;
-  height: 20rem;
-  position: absolute;
-  top: 1;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.hover-effect-dev svg {
-  width: 35rem;
-  height: 35rem;
-  position: absolute;
-  top: -200%;
-  left: -10%;
-  transform: -50%, -50%;
-  z-index: 1;
-}
-
-.hover-effect svg {
-  width: 32rem;
-  height: 32rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.hover-effect-dev svg path {
-  fill: transparent;
-  stroke-width: 1px;
-  stroke: rgb(0, 0, 0);
-}
-
-.hover-effect-dev svg path {
-  stroke-dasharray: 2000.709716796875;
-  stroke-dashoffset: -2000.709716796875;
-  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.hover-effect-dev:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.hover-effect-design svg path {
-  fill: transparent;
-  stroke-width: 1px;
-  stroke: rgb(255, 34, 34);
-}
-
-.hover-effect svg path {
-  fill: transparent;
-  stroke-width: 1px;
-  stroke: rgb(0, 0, 0);
-}
-
-.hover-effect-design svg path {
-  stroke-dasharray: 2000.709716796875;
-  stroke-dashoffset: -2000.709716796875;
-  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.hover-effect-design:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.hover-effect svg path {
-  stroke-dasharray: 1000.709716796875;
-  stroke-dashoffset: -1000.709716796875;
-  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.hover-effect:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.jean-logo a svg {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.jean-logo a svg path {
-  fill: transparent;
-  stroke-width: 25px;
-  stroke: rgb(79, 79, 255);
-}
-
-.jean-logo a svg path {
-  stroke-dasharray: 5000.709716796875;
-  stroke-dashoffset: -5000.709716796875;
-  /*or the positive one*/
-  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
-}
-
-.jean-logo a:hover svg path {
-  stroke-dashoffset: 0;
-}
-
-.jean-logo a span {
-  color: black;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -2px;
-  transition: 0.3s;
-}
-
-.header-btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.lets-talk-icon {
-  color: rgb(79, 79, 255);
-  font-size: 1.8rem;
-  cursor: pointer;
-  transition: 0.3s;
-  display: none;
-}
-
-.lets-talk-icon:hover {
-  color: rgb(30, 30, 175);
-}
-
-.theme-btn {
-  position: relative;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 27px;
-  cursor: pointer;
-}
-
-.theme-btn i {
-  position: absolute;
-  color: rgb(79, 79, 255);
-  font-size: 1.7rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.theme-btn:hover i {
-  color: rgb(30, 30, 175);
-  transform: rotate(-15deg);
-}
-
-.theme-btn .moon-icon {
-  display: none;
-}
-
-#behance svg {
-  width: 28px;
-  height: 28px;
-  fill: rgb(0, 0, 0);
-  transition: 0.3s ease-in-out;
-}
-
-#behance:hover svg {
-  transform: scale(1.2);
-  fill: rgb(79, 79, 255);
-}
-
-#github svg {
-  fill: #000000;
-  transition: 0.3s ease-in-out;
-}
-
-#github:hover svg {
-  transform: scale(1.2);
-  fill: rgb(79, 79, 255);
-}
-
-#linkedin svg {
-  width: 23px;
-  height: 23px;
-  fill: #000000;
-  transition: 0.3s ease-in-out;
-}
-
-#linkedin:hover svg {
-  transform: scale(1.2);
-  fill: rgb(79, 79, 255);
+.section-title {
+  padding-top: 20rem;
 }
 
 .section-container {
@@ -436,14 +167,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
-  height: 100vh;
-  margin-left: 5.8rem;
-  margin-right: 5.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .section-container h1 {
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: 200;
 }
 
@@ -452,22 +181,21 @@ body {
 }
 
 .section-container span::before {
-  content: "Graphic Designer";
-  font-size: 7rem;
+  content: "Jean";
+  font-size: 3rem;
   font-weight: 600;
-  color: #000000;
   animation: words 20s infinite;
 }
 
 .section-container span::after {
   content: "";
   position: absolute;
-  width: calc(100% + 12px);
-  height: 800%;
+  width: calc(100% + 15px);
+  height: 300%;
   background-color: rgb(241, 241, 241);
   border-left: 2px solid #000000;
-  right: -15px;
-  animation: cursor 1s infinite ease-in-out, typing 30s steps(14) infinite;
+  right: -10px;
+  animation: cursor 1s infinite ease-in-out, typing 30s steps(10) infinite;
 }
 
 @keyframes cursor {
@@ -479,17 +207,17 @@ body {
 @keyframes words {
   0%,
   32% {
-    content: "Jean Gutiérrez";
+    content: "Jean";
   }
 
   33%,
   80% {
-    content: "Graphic Designer";
+    content: "Design";
   }
 
   81%,
   100% {
-    content: "Developer";
+    content: "Dev";
   }
 }
 
@@ -520,79 +248,13 @@ body {
   }
 }
 
+/* buttons  */
+
 .btns-section-container {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   padding-top: 3rem;
-}
-
-#description-main {
-  height: 100vh;
-  cursor: pointer;
-  width: 78%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5rem;
-  padding-left: 4rem;
-}
-
-#description-main p {
-  color: #000000;
-  line-height: 1;
-  font-size: 3.5rem;
-  font-weight: 200;
-  letter-spacing: -2px;
-  transition: 0.2s ease-in-out;
-}
-
-#description-main p span {
-  font-size: 3.5rem;
-  font-weight: 800;
-  letter-spacing: -2px;
-  transition: 0.2s ease-in-out;
-}
-
-.hover-effect {
-  transition: 0.3s ease-in-out;
-}
-
-.hover-effect-design:hover,
-.hover-effect-dev:hover,
-.hover-effect:hover,
-.hover-effect-ux:hover {
-  color: rgb(79, 79, 255);
-}
-
-.tools-container {
-  display: flex;
-  width: 70%;
-  padding-top: 3rem;
-  padding-bottom: 8rem;
-  padding-left: 1rem;
-  margin: auto;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.html-icon svg {
-  width: 20px;
-  height: 20px;
-  transition: 0.3s ease-in-out;
-}
-
-.section-effect {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease, transform 1s ease;
-}
-
-.section-effect.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .button_top {
@@ -601,7 +263,7 @@ body {
   border: 0;
   color: #242424;
   border-radius: 1em;
-  padding: 0.575em 1.8em;
+  padding: 0.575em 0.9em;
   text-shadow: 0 0.0625em 0 #aaaaaa;
   box-shadow: inset 0 0.825em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
     0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
@@ -621,9 +283,65 @@ button:active {
     0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
 }
 
-.button_top a {
-  font-weight: 600;
-  font-size: 1.8rem;
+/* buttons */
+
+/* presentation */
+
+/* Description */
+
+.decription-main {
+  padding-top: 13rem;
+  padding-bottom: 4rem;
+}
+
+.decription-main p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  color: #000000;
+  line-height: 1.1;
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+  transition: 0.2s ease-in-out;
+}
+
+.decription-main p span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  transition: 0.2s ease-in-out;
+}
+
+.hover-effect {
+  transition: 0.3s ease-in-out;
+}
+
+.hover-effect-design:hover,
+.hover-effect-dev:hover,
+.hover-effect:hover,
+.hover-effect-ux:hover {
+  color: rgb(79, 79, 255);
+}
+
+/* Description */
+
+/* tools */
+
+.tools-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* tools */
+
+/* projects */
+
+.projects {
+  padding-top: 8rem;
 }
 
 .title-project {
@@ -631,8 +349,8 @@ button:active {
   justify-content: center;
   padding-bottom: 3rem;
   cursor: pointer;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   transition: 0.5s ease-in-out;
 }
 
@@ -642,7 +360,7 @@ button:active {
 
 .cards-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -650,7 +368,7 @@ button:active {
 }
 
 .card-container {
-  width: 325px;
+  width: 240px;
   background-color: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
@@ -715,6 +433,10 @@ button:active {
   font-weight: 400;
 }
 
+/* projects */
+
+/*  footer */
+
 .jean-footer {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -741,5 +463,788 @@ button:active {
 }
 
 .footer-span {
+  font-size: 0.8rem;
   font-weight: 800;
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
+
+/* footer */
+
+/* effects */
+.jean-logo a,
+.hover-effect-ux,
+.hover-effect,
+.hover-effect-design,
+.hover-effect-dev,
+.title-project {
+  position: relative;
+}
+
+/* logo navbar */
+.jean-logo a svg {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.jean-logo a svg path {
+  fill: transparent;
+  stroke-width: 25px;
+  stroke: rgb(79, 79, 255);
+}
+
+.jean-logo a svg path {
+  stroke-dasharray: 5000.709716796875;
+  stroke-dashoffset: -5000.709716796875;
+  /*or the positive one*/
+  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.jean-logo a:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/* logo navbar */
+
+/* description */
+
+/* Full stack developer */
+
+.hover-effect svg {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hover-effect svg path {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgb(0, 0, 0);
+}
+
+.hover-effect svg path {
+  stroke-dasharray: 1000.709716796875;
+  stroke-dashoffset: -1000.709716796875;
+  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.hover-effect:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/*  graphic designer  */
+
+.hover-effect-design svg {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hover-effect-design svg path {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgb(255, 34, 34);
+}
+
+.hover-effect-design svg path {
+  stroke-dasharray: 2000.709716796875;
+  stroke-dashoffset: -2000.709716796875;
+  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.hover-effect-design:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/* frontend and backend */
+
+.hover-effect-dev svg {
+  width: 9rem;
+  height: 9rem;
+  position: absolute;
+  top: -100%;
+  left: -10%;
+  transform: -50%, -50%;
+  z-index: 1;
+}
+
+.hover-effect-dev svg path {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgb(0, 0, 0);
+}
+
+.hover-effect-dev svg path {
+  stroke-dasharray: 2000.709716796875;
+  stroke-dashoffset: -2000.709716796875;
+  transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.hover-effect-dev:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/* UX/UI */
+
+.hover-effect-ux svg {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hover-effect-ux svg path {
+  fill: transparent;
+  stroke-width: 2px;
+  stroke: rgb(255, 5, 5);
+}
+
+.hover-effect-ux svg path {
+  stroke-dasharray: 1000.709716796875;
+  stroke-dashoffset: -1000.709716796875;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.hover-effect-ux:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/* description */
+
+/* project */
+
+.title-project svg {
+  width: 9rem;
+  height: 9rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.title-project svg path {
+  fill: transparent;
+  stroke-width: 1.2px;
+  stroke: rgb(0, 0, 0);
+}
+
+.title-project svg path {
+  stroke-dasharray: 1000.709716796875;
+  stroke-dashoffset: -1000.709716796875;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.title-project:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+.section-effect {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.section-effect.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* effects */
+
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+
+  .cursor {
+    z-index: 1000;
+    position: fixed;
+    /* top: 50%;
+    left: 50%; */
+    pointer-events: none;
+  }
+
+  .cursor-dot {
+    position: absolute;
+    background: rgb(53, 53, 184);
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition-property: top, left, width, height;
+    transition-duration: 0.03s, 0.03s, 0.3s, 0.3s;
+  }
+
+  .cursor-circle {
+    position: absolute;
+    border: 2px solid rgb(53, 53, 184);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    transition-property: top, left;
+    transition-duration: 0.09s, 0.09s;
+  }
+
+  .cursor-dot.large {
+    background: rgb(53, 53, 184, 0.25);
+    width: 75px;
+    height: 75px;
+    transition-property: top, left, width, height;
+    transition-duration: 0.03s, 0.03s, 0.3s, 0.3s;
+  }
+
+  .jean-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .jean-logo a span {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+
+  .header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  #behance svg {
+    width: 28px;
+    height: 28px;
+    fill: rgb(0, 0, 0);
+  }
+
+  #github svg {
+    width: 28px;
+    height: 28px;
+    fill: #000000;
+    transition: 0.3s ease-in-out;
+  }
+
+  #linkedin svg {
+    width: 23px;
+    height: 23px;
+    fill: #000000;
+    transition: 0.3s ease-in-out;
+  }
+
+  .jean-main-btn {
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .jean-main-btn a {
+    color: black;
+    font-size: 1.07rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    padding-top: 0rem;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    height: 100vh;
+    margin-left: 5.8rem;
+    margin-right: 5.8rem;
+  }
+
+  .section-container h1 {
+    font-size: 7rem;
+    font-weight: 200;
+  }
+
+  .section-container span {
+    position: relative;
+  }
+
+  .section-container span::before {
+    content: "Graphic Designer";
+    font-size: 7rem;
+    font-weight: 600;
+    color: #000000;
+    animation: words 20s infinite;
+  }
+
+  .section-container span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 12px);
+    height: 800%;
+    background-color: rgb(241, 241, 241);
+    border-left: 2px solid #000000;
+    right: -15px;
+    animation: cursor 1s infinite ease-in-out, typing 30s steps(14) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ffffff;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    32% {
+      content: "Jean";
+    }
+
+    33%,
+    80% {
+      content: "Designer";
+    }
+
+    81%,
+    100% {
+      content: "Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 12px);
+    }
+  }
+
+  .btns-section-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-top: 3rem;
+  }
+
+  .button_top {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 1em;
+    padding: 0.575em 1.8em;
+    text-shadow: 0 0.0625em 0 #aaaaaa;
+    box-shadow: inset 0 0.825em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.525em 0.5em 0 #9c9c9c;
+    transition: 0.15s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    translate: 0 0.12em;
+  }
+
+  button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+  }
+
+  .button_top a {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    padding-top: 0rem;
+  }
+
+  .decription-main p {
+    padding-left: 14rem;
+    padding-right: 11rem;
+    cursor: pointer;
+    color: #000000;
+    line-height: 1;
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: -2px;
+  }
+
+  .decription-main p span {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+  }
+
+  .tools-container {
+    display: flex;
+    width: 70%;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+    padding-left: 1rem;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .htlm-icon svg,
+  .css-icon svg,
+  .javascript-icon svg,
+  .tailwind-icon svg,
+  .bootstrap-icon svg,
+  .react-icon svg,
+  .figma-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .title-project {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    cursor: pointer;
+    font-size: 4rem;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+  }
+
+  .title-project:hover {
+    color: rgb(79, 79, 255);
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .card-container {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease-in-out;
+  }
+
+  .card-container:hover {
+    transform: scale(1.03);
+  }
+
+  .cards-container img {
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease-in-out;
+  }
+
+  .card-container img:hover {
+    transform: scale(1.03);
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-content h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 300;
+    padding-bottom: 0.8rem;
+  }
+
+  .btn-card {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    transition: 0.5s ease-in-out;
+  }
+
+  .btn-card a {
+    background-color: rgb(79, 79, 255);
+    color: white;
+    font: 0.5rem;
+    font-weight: 300;
+    padding: 0.7rem;
+    border-radius: 25px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .btn-card:hover {
+    transform: scale(1.01);
+  }
+
+  .btn-card a:hover {
+    background-color: rgb(43, 43, 146);
+    font-weight: 400;
+  }
+
+  .jean-logo a svg {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .jean-logo a svg path {
+    fill: transparent;
+    stroke-width: 25px;
+    stroke: rgb(79, 79, 255);
+  }
+
+  .jean-logo a svg path {
+    stroke-dasharray: 5000.709716796875;
+    stroke-dashoffset: -5000.709716796875;
+    transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+  }
+
+  .jean-logo a:hover svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .hover-effect svg {
+    width: 32rem;
+    height: 32rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .hover-effect svg path {
+    fill: transparent;
+    stroke-width: 1px;
+    stroke: rgb(0, 0, 0);
+  }
+
+  .hover-effect svg path {
+    stroke-dasharray: 1000.709716796875;
+    stroke-dashoffset: -1000.709716796875;
+    transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+  }
+
+  .hover-effect:hover svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .hover-effect-design svg {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 50%;
+    right: 200%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .hover-effect-design svg path {
+    fill: transparent;
+    stroke-width: 1px;
+    stroke: rgb(255, 34, 34);
+  }
+
+  .hover-effect-design svg path {
+    stroke-dasharray: 2000.709716796875;
+    stroke-dashoffset: -2000.709716796875;
+    transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+  }
+
+  .hover-effect-design:hover svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .hover-effect-dev svg {
+    width: 38rem;
+    height: 38rem;
+    position: absolute;
+    top: -220%;
+    left: -10%;
+    transform: -50%, -50%;
+    z-index: 1;
+  }
+
+  .hover-effect-dev svg path {
+    fill: transparent;
+    stroke-width: 1px;
+    stroke: rgb(0, 0, 0);
+  }
+
+  .hover-effect-dev svg path {
+    stroke-dasharray: 2000.709716796875;
+    stroke-dashoffset: -2000.709716796875;
+    transition: stroke-dashoffset 1s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+  }
+
+  .hover-effect-dev:hover svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .hover-effect-ux svg {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .hover-effect-ux svg path {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: rgb(255, 5, 5);
+  }
+
+  .hover-effect-ux svg path {
+    stroke-dasharray: 1000.709716796875;
+    stroke-dashoffset: -1000.709716796875;
+    transition: stroke-dashoffset 0.8s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+  }
+
+  .hover-effect-ux:hover svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .title-project svg {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-container span {
+    position: relative;
+  }
+
+  .section-container span::before {
+    content: "Graphic Designer";
+    font-size: 7rem;
+    font-weight: 600;
+    color: #000000;
+    animation: words 20s infinite;
+  }
+
+  .section-container span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 12px);
+    height: 800%;
+    background-color: rgb(241, 241, 241);
+    border-left: 2px solid #000000;
+    right: -15px;
+    animation: cursor 1s infinite ease-in-out, typing 30s steps(14) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ffffff;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    32% {
+      content: "Jean Gutiérrez";
+    }
+
+    33%,
+    80% {
+      content: "Graphic Designer";
+    }
+
+    81%,
+    100% {
+      content: "Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 12px);
+    }
+  }
 }
