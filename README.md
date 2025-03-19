@@ -17,7 +17,7 @@ https://synfiniti.github.io/portfolioweb/
 ## 🛠 Technologies Used
 - *HTML5* for semantic structure
 - *CSS3* for styles and animations
-- *Vanilla JavaScript* for dynamic interactions
+- *JavaScript* for dynamic interactions
 - *Icons* by [SVG Repo](https://www.svgrepo.com/)
 - *Custom fonts* by [Google Fonts](https://fonts.google.com/)
 
